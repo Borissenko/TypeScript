@@ -1,0 +1,73 @@
+= let
+let name: string = 'Привет!'
+let name = '' as string
+
+
+перенятие типа от аналогичного поля в интерфейсе (лектор запутался)
+interface Person {
+  name: string
+  age: number
+}
+type EtPerson = keyof Person
+const name: EtPerson = 'Kola'
+
+
+
+
+= []
+const aa: number[] = [1, 2, 3, 4]
+let dd: number[][] = [[1,2,3,4,5], [6,7,8,9,10]]   //массив из массивов
+
+const bb: Array<number> = [1, 2, 3, 4]
+const cc: [number, string] = [1, 'kola']   //жесткое описание типа в каждой ячейке массива
+
+
+
+
+
+= {}
+
+
+
+
+
+
+
+= function(){}
+function f1(a: string, name?: string, age: number = 25): void {
+    console.log(a)
+}
+
+?   - не обязательный аргумент
+25  - значение по-умолчанию
+
+
+
+
+
+
+
+= стрелочная функция
+() => number
+
+
+
+
+
+
+
+= методы
+let dd: any = 'Привет'
+
+(dd as string).length
+(<string>dd).length
+
+
+
+
+
+
+= class
+class Add impliment Person {                //Person- это применяемый интерфейс
+ name: "Kola"
+}

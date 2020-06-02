@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "esnext", //https://ru.vuejs.org/v2/guide/typescript.html рекомендовано- "es5"
+    "module": "esnext", //https://ru.vuejs.org/v2/guide/typescript.html рекомендовано- "es2015"
+    "strict": true,   //https://ru.vuejs.org/v2/guide/typescript.html рекомендовано тоже- true,
+    //чтобы использовать проверку типов у this в методах компонентов,
+    //иначе он всегда будет рассматриваться как тип any.
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

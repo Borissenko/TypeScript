@@ -1,0 +1,34 @@
+= do not use class-style components
+https://github.com/ffxsam/vue-typescript-cookbook (!)
+
+оч хорошая статья
+https://github.com/ffxsam/vue-typescript-cookbook#when-i-use-an-array-prop-type-my-components-properties-data-computed-properties-etc-are-shown-as-type-errors
+
+в купе с
+https://github.com/vuejs/vuex/pull/1121
+
+= Nuxt TypeScript
+https://typescript.nuxtjs.org/cookbook/store.html#class-based
+
+= оч круто и просто (!) ===================================
+https://blog.usejournal.com/type-vue-without-typescript-b2b49210f0b
+https://itnext.io/type-vuex-without-typescript-4f183b83a907
+
+https://stackoverflow.com/questions/53807294/how-is-the-correct-way-to-work-with-vuex-and-typescript
+
+# статья
+https://alligator.io/vuejs/using-typescript-with-vue/
+# туториал
+https://ru.vuejs.org/v2/guide/typescript.html
+
+Справочник
+https://xsltdev.ru/typescript/guide/basic/funcs-2/
+
+Курс хороший, но недописанный оч сильно
+https://vuejs-course.com/
+
+Курс по чистому ТС от Максимилиана
+https://www.youtube.com/watch?v=BwuLxPH8IDs
+
+Курс от Минина
+https://www.youtube.com/watch?v=nyIpDs2DJ_c
