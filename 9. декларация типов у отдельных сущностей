@@ -15,33 +15,60 @@ const name: EtPerson = 'Kola'
 
 
 = []
+А) Перед "=".
+1.
 const aa: number[] = [1, 2, 3, 4]
-let dd: number[][] = [[1,2,3,4,5], [6,7,8,9,10]]   //массив из массивов
+const aa: User[] = [User, User, User]               //BEST(!)  User- это нами прописанный интарфейс.
+const dd: number[][] = [[1,2,3,4,5], [6,7,8,9,10]]   //массив из массивов
+const dd: (number | string)[] = ['Age', 20]      //несколько возможных типов ВРАЗБРОД
 
+2.
+const cc: [number, string] = [1, 'kola']   //НЕ НАДО ТАК(!), жесткое описание типа в каждой ячейке массива. Это Tuples-тип.
+3.
 const bb: Array<number> = [1, 2, 3, 4]
-const cc: [number, string] = [1, 'kola']   //жесткое описание типа в каждой ячейке массива
 
+B) После "=".
+4.
+const arr = <User[]>[]         //BEST(!)
+const arr = <string[]>[]
+5.
+const arr = [] as User[]
+6.
+const arr = new Array<User>()     //Using the Array constructor, еще лучше.
 
 
 
 
 = {}
+  state: {
+    token: 'false',
+    groups: [],
+    tasks: ''
+  } as unknown as St
+
+....
+CHANGE_STATUS(st: RootState, {id, newValue}: {id: number; newValue: string;})
 
 
-
-
-
-
-
-= function(){}
+= function
+1.
 function f1(a: string, name?: string, age: number = 25): void {
     console.log(a)
 }
-
 ?   - не обязательный аргумент
 25  - значение по-умолчанию
 
 
+2. Если может возвращатся массив, НО ПУСТОЙ, то надо прописывать именно так(!).
+    ...
+    return <User[]>[]
+}
+
+или тоже можно так
+   ...
+   let temp: User[] = [];
+   return temp
+ }
 
 
 
@@ -50,19 +77,18 @@ function f1(a: string, name?: string, age: number = 25): void {
 = стрелочная функция
 () => number
 
+??
+ACCEPT_ITEM: (state: RootState) => (id: number) => state.tasks.find((it: Task) => it.id === id) as Task,
+ACCEPT_ITEM: (state: RootState): (id: number) => (Task | undefined) => (id: number): Task | undefined => state.tasks.find((it: Task) => it.id === id),
+ACCEPT_ITEM: (state: RootState): (Task | undefined) => (id: number): Task | undefined => state.tasks.find((it: Task) => it.id === id),
 
 
 
-
-
-
-= методы
-let dd: any = 'Привет'
+= аргументы у методов (здесь- метод массивов [].length)
+let dd: any = 'Привет'   //заявляем "массив"
 
 (dd as string).length
 (<string>dd).length
-
-
 
 
 
@@ -71,3 +97,8 @@ let dd: any = 'Привет'
 class Add impliment Person {                //Person- это применяемый интерфейс
  name: "Kola"
 }
+
+
+=Promise
+:Promise<User> | undefined
+new Promise<IPlayer>()

@@ -2,7 +2,7 @@
 https://github.com/ffxsam/vue-typescript-cookbook
 
 а) Если однократно, то пойдет по-простому:
-
+import Vue from 'vue'
 export default Vue.extend({
   methods: {
     test() {
