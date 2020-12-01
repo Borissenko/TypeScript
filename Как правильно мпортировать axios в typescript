@@ -1,0 +1,15 @@
+ Как правильно мпортировать axios в typescript? *
+A) import axios, { AxiosRequestConfig, AxiosInstance } from 'axios'
+B) import axios, { AxiosRequestConfig } from 'axios'
+C) import axios from 'axioss'
+D) import axios from 'axios'
+
+
+npm install --save @types/axios for typescript support.
+
+import axios, { AxiosRequestConfig, AxiosInstance } from 'axios'
+HTTP.interceptors.request.use((config: AxiosRequestConfig) => {
+  config.headers['x-projectkey'] = 1234
+
+  return config
+})
