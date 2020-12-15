@@ -23,5 +23,8 @@ export default Vue.extend({   //вообще-то это базовая запи
         return this.$store.getters.my
       }
     },
+    onByProduct(this: any): void {      //обязательно!!!
+      this.CLEAR_BASKET
+    }
 
 
