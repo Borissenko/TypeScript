@@ -1,0 +1,17 @@
+{
+//  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*"],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "composite": true,
+    "types": ["node"],
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "preserveValueImports": false,
+    "isolatedModules": false  ,
+  }
+}
